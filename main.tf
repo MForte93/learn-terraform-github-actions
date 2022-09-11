@@ -12,10 +12,10 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "REPLACE_ME"
+    organization = "gh-aws-actions"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "gh-aws-actions"
     }
   }
 }
@@ -77,3 +77,4 @@ resource "aws_security_group" "web-sg" {
 output "web-address" {
   value = "${aws_instance.web.public_dns}:8080"
 }
+
